@@ -1,0 +1,58 @@
+﻿<Window x:Name="StartupWindow" x:Class="BIMPO_BusIness_Management_Process_Observer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BIMPO_BusIness_Management_Process_Observer"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Hello BIMPO!" Height="600" Width="850" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Resource/PO.ico" Closing="StartupWindow_Closing" WindowStyle="None">
+    <Grid x:Name="BackgroundGrid" Cursor="Arrow" Loaded="StartupWindow_Loaded" Background="#FFE0E0E0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="569*"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="GreetingLabel" Content="안녕하세요 이름님" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.909,1.53" Margin="20,24,0,0" Height="41" Width="467" FontSize="24" FontWeight="Bold" Grid.Row="1" Foreground="White"/>
+        <ListView x:Name="BusinessListView" HorizontalAlignment="Left" Height="351" Margin="22,74,0,0" VerticalAlignment="Top" Width="816" FontSize="16" Grid.Row="1" SelectionMode="Single" MouseDoubleClick="BusinessListView_MouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="업무" Width="500" DisplayMemberBinding="{Binding BusinessTitle}"/>
+                    <GridViewColumn Header="시작일" Width="200" DisplayMemberBinding="{Binding Degdate}"/>
+                    <GridViewColumn Header="진척도" Width="80" DisplayMemberBinding="{Binding Progress}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="MakeNewBusinessBtn" BorderBrush="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="180" Margin="20,449,0,0" Grid.Row="1" Background="#FF41A681" Height="57" Click="MakeNewBusinessBtn_Clicked" FontSize="14" FontWeight="Normal">
+            <Label Foreground="White" Content="새 비지니스 시작하기" Background="{x:Null}"></Label>
+        </Button>
+        <TextBlock x:Name="BusinessTitle" HorizontalAlignment="Stretch" Margin="21,511,315,30" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Height="28" FontSize="20" Foreground="White" Cursor="No"/>
+
+        <Button x:Name="DeleteBusinessBtn" Content="선택한 업무 삭제" HorizontalAlignment="Left" VerticalAlignment="Top" Width="149" Margin="688,22,0,0" Grid.Row="1" Background="#FFE80000" Click="DeleteBusinessBtn_Click"/>
+        <Label Content="100%" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="811,525,-1,0" Grid.Row="1" Background="{x:Null}" Foreground="#DDFFFFFF"/>
+        <ProgressBar x:Name="BusinessProcessBar" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="851" Margin="0,548,-1,-2" Grid.Row="1" Foreground="#FF008957" Background="#FF3EC167" ValueChanged="ProgressAverBar_ValueChanged" BorderBrush="#FF4BA4F2">
+        </ProgressBar>
+        <Button x:Name="OpenBusinessBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="685,447,0,0" Grid.Row="1" Height="55" Background="#FF4BA4F2" Click="OpenBusinessBtn_Click" FontSize="16" BorderBrush="White">
+            <Label Content="업무 열기" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" Foreground="#DDFFFFFF"/>
+        </Button>
+        <!--윗 표시줄-->
+        <Grid Background="#FF3E3740" MouseDown="WindowDragMove_MouseDown" Margin="0,0,0,564" Grid.RowSpan="2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="RefreshBtn" Margin="0,3,5,4" Height="Auto" Width="51" Click="RefreshBtn_Click" Background="#FF41A681" BorderBrush="White">
+                    <materialDesign:PackIcon Kind="Refresh"/>
+                </Button>
+                <Button x:Name="MinimizeBtn" Margin="0,3,5,4" Height="Auto" Width="51" Click="MinimizeBtn_Click" Background="#FF4BA4F2" BorderBrush="White">
+                    <materialDesign:PackIcon Kind="WindowMinimize"/>
+                </Button>
+                <Button x:Name="CloseBtn" Width="66" Height="Auto" Margin="0,3,5,4" Background="#FFC50024" BorderBrush="White" Click="CloseBtn_Click">
+                    <materialDesign:PackIcon Height="20" Width="20" Kind="Power" RenderTransformOrigin="-0.339,0.385"/>
+                </Button>
+            </StackPanel>
+            <Image HorizontalAlignment="Left" Height="29" Margin="5,5,0,0" VerticalAlignment="Top" Width="28" Source="Resource/PO.ico"/>
+            <Label Content="BIMPO" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,0,0,0" Background="{x:Null}" BorderBrush="White" Foreground="#DDFFFFFF" FontSize="18" Height="30"/>
+        </Grid>
+        <TextBlock x:Name="AttainedBusinessPercentage" HorizontalAlignment="Left" Margin="145,1,0,0" TextWrapping="Wrap" Text="전체 100% 달성" VerticalAlignment="Top" Height="20" Width="106" Foreground="White" FontSize="14"/>
+        <ProgressBar x:Name="ProgressAverBar" HorizontalAlignment="Left" Height="10" Margin="145,20,0,0" VerticalAlignment="Top" Width="100" Foreground="#FF00375D" Background="#FF4BA4F2" BorderBrush="#FF4BA4F2"/>
+
+    </Grid>
+</Window>

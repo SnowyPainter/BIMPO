@@ -1,0 +1,19 @@
+﻿<Window x:Class="BIMPO_BusIness_Management_Process_Observer.BusinessMessage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BIMPO_BusIness_Management_Process_Observer"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="BusinessMessage" Height="169" Width="364" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid Margin="0,0,-3,0">
+        <Grid HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="365" Background="#004FA4" Margin="-5,0,-1,0" MouseDown="Grid_MouseDown">
+            <materialDesign:PackIcon Kind="InformationVariant" Foreground="White" Margin="15,0,0,0" Height="30" Width="30" RenderTransformOrigin="0.167,0.5"/>
+            <TextBlock x:Name="captionTextBlock" HorizontalAlignment="Left" Margin="55,5,0,0" TextWrapping="Wrap" Text="Caption" VerticalAlignment="Top" Foreground="White" FontSize="14" RenderTransformOrigin="1.224,0.842" Width="305" Height="25"/>
+        </Grid>
+        <Button x:Name="OkBtn_Clicked" Content="확인" HorizontalAlignment="Left" Margin="270,120,0,0" VerticalAlignment="Top" Width="75" BorderBrush="White" Background="#D2A6D6" Click="OkBtn_Clicked_Click"/>
+        <TextBlock x:Name="contentTextBlock" HorizontalAlignment="Left" Margin="14,40,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="75" Width="331" FontSize="16" TextAlignment="Center"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Business>
+    <BusinessTitle>현식이</BusinessTitle>
+    <Degdate>2019-12-29</Degdate>
+    <Progress>100</Progress>
+    <Deadline>
+      <Start>2019-12-08</Start>
+      <End>2019-12-31</End>
+    </Deadline>
+    <Memos>
+      <Memo Index="0">
+        <Title>방금 생각난 아이디어!</Title>
+        <Content>현식이 이모티콘은 한정판으로하자</Content>
+        <Color>#FFB128FF</Color>
+      </Memo>
+      <Memo Index="1">
+        <Title>웹툰도 만들자</Title>
+        <Content>웹툰을 만들고 다른 웹툰에 투입</Content>
+        <Color>#FF00B0C1</Color>
+      </Memo>
+      <Memo Index="2">
+        <Title>웹 사이트 구축후에는</Title>
+        <Content>웹툰을 그기로 이전. ( 사용자수 증가 효과 기대)</Content>
+        <Color>#FFF2B705</Color>
+      </Memo>
+    </Memos>
+    <Tasks>
+      <Task Index="0">
+        <Title>현식이 이모티콘 팔기</Title>
+        <Describe>현식이 이모티콘을 팔아서 웹사이트 구축 비용을 범</Describe>
+        <Priority>4</Priority>
+        <Accomplished>True</Accomplished>
+      </Task>
+      <Task Index="1">
+        <Title>웹사이드 구축</Title>
+        <Describe>외주를 맡겨서 웹사이트를 구축하고 호스팅함 도메인도 삼</Describe>
+        <Priority>2</Priority>
+        <Accomplished>True</Accomplished>
+      </Task>
+    </Tasks>
+  </Business>
+</Root>

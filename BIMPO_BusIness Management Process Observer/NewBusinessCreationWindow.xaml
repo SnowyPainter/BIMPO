@@ -1,0 +1,22 @@
+﻿<Window x:Class="BIMPO_BusIness_Management_Process_Observer.NewBusinessCreationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BIMPO_BusIness_Management_Process_Observer"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Height="500" Width="500" ResizeMode="NoResize" Icon="Resource/PO.ico" WindowStyle="None">
+    <Grid Background="#FFD9B589">
+        <TextBox x:Name="BusinessTitle" HorizontalAlignment="Left" Height="50" Margin="185,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" FontSize="22" CaretBrush="#FFF2B705" Foreground="White" SelectionBrush="#FFF2B705" BorderBrush="#FF735D36"/>
+        <Label Content="사업 이름" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="65,221,0,0" FontSize="22" Foreground="White" FontWeight="Bold"/>
+        <Button x:Name="SubmitBtn_Clicked" Content="확인" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="125,425,0,0" Height="63" Click="SubmitBtn_Click" FontSize="24" Background="#FF735D36" BorderBrush="White"/>
+        <Button x:Name="CloseBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" Margin="380,460,0,0" Height="28" BorderBrush="White" Background="#FF8C0E03" Click="CloseBtn_Click">
+            <materialDesign:PackIcon Margin="0,0,0,0" Kind="CloseBox" Height="20" Width="20"></materialDesign:PackIcon>
+        </Button>
+        <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="500" Background="#FF010E26">
+            <Label Content="비지니스를 시작하기" HorizontalAlignment="Left" Margin="25,20,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Background="{x:Null}" Foreground="White" Height="55" Width="345"/>
+        </Grid>
+
+    </Grid>
+</Window>

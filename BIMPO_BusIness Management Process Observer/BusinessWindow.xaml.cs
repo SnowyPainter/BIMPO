@@ -32,6 +32,10 @@ namespace BIMPO_BusIness_Management_Process_Observer
 
             BusinessName = businessName.Trim();
             WindowTitle.Content = BusinessName;
+
+            MonthlySales_TextBlock.Text = XmlBusinessManager.GetMonthlyAimSales(BusinessName).ToString();
+            BusinessScale_TextBlock.Text = XmlBusinessManager.GetBusinessAimScale(BusinessName).ToString();
+
             DeadlineDatesInit(BusinessName);
             BusinessProgressBarInit(BusinessName);
             DirectoryInit(BusinessName);
@@ -45,9 +49,13 @@ namespace BIMPO_BusIness_Management_Process_Observer
         {
             RefreshTaskListView();
         }
+        private void AccountList_Loaded(object sender, RoutedEventArgs e)
+        {
+            AccountingListview.ItemsSource = IOBusiness.GetAccountBooks(BusinessName);
+        }
         private void MemoStack_Loaded(object sender, RoutedEventArgs e)
         {
-            var memos = XmlBusinessManager.SelectSomeMemos(BusinessName, 5); //least three
+            var memos = XmlBusinessManager.GetSomeMemos(BusinessName, 5); //least three
             CreateMemoStacks(memos);
         }
         private void CreateMemoStacks(List<Memo> memos)
@@ -275,9 +283,13 @@ namespace BIMPO_BusIness_Management_Process_Observer
             if (SelectedTask != null)
                 FileListbox.ItemsSource = IOBusiness.GetTaskFileNames(BusinessName, SelectedTask.Title);
         }
+        public void RefreshAccountingFiles()
+        {
+            AccountingListview.ItemsSource = IOBusiness.GetAccountBooks(BusinessName);
+        }
         public void RefreshLeastMemoStacks(int howMany)
         {
-            var memos = XmlBusinessManager.SelectSomeMemos(BusinessName, howMany);
+            var memos = XmlBusinessManager.GetSomeMemos(BusinessName, howMany);
             CreateMemoStacks(memos);
         }
         //Refreshing
@@ -457,6 +469,23 @@ namespace BIMPO_BusIness_Management_Process_Observer
             memoWindow.ShowDialog();
         }
         //</Memo>
+        //<According>
+        private void AttachAccountingFile_Click(object sender, RoutedEventArgs e)
+        {
+            if (!Directory.Exists($"./{BusinessName}"))
+                IOBusiness.CreateBusinessDirectory(BusinessName);
 
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == true)
+            {
+                IOBusiness.AttachFileToAccountBook(BusinessName, ofd.FileName);
+
+                BusinessMessageBox.Show("회계장부가 등록되었습니다.", "회계장부 파일");
+
+                RefreshAccountingFiles();
+            }
+        }
+
+        
     }
 }

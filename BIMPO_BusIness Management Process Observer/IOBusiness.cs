@@ -31,9 +31,20 @@ namespace BIMPO_BusIness_Management_Process_Observer
                 Directory.CreateDirectory(rootPath + businessName + "/" + taskName);
             }
         }
+        private static void attachFile(string savePath, string attachFile)
+        {
+            File.Copy(attachFile, savePath);
+        }
         public static void AttachFileToTask(string businessName, string taskName, string filePath)
         {
-            File.Copy(filePath, $"./{businessName}/{taskName}/{Path.GetFileName(filePath)}");
+            attachFile($"./{businessName}/{taskName}/{Path.GetFileName(filePath)}", filePath);
+        }
+        public static void AttachFileToAccountBook(string businessName, string filePath)
+        {
+            if (!Directory.Exists($"./{businessName}/AccountBooks/"))
+                Directory.CreateDirectory($"./{businessName}/AccountBooks/");
+
+            attachFile($"./{businessName}/AccountBooks/{Path.GetFileName(filePath)}", filePath);
         }
         public static IEnumerable<string> GetTaskFileNames(string businessName, string taskName, string rootPath = "./")
         {
@@ -47,6 +58,19 @@ namespace BIMPO_BusIness_Management_Process_Observer
             else
                 yield return null;
         }
+        public static IEnumerable<AccountBook> GetAccountBooks(string businessName, string rootPath="./")
+        {
+            if (Directory.Exists($@"{rootPath}/{businessName}/AccountBooks"))
+            {
+                foreach (var filepath in Directory.GetFiles($@"{rootPath}/{businessName}/AccountBooks"))
+                {
+                    yield return new AccountBook(Path.GetFileName(filepath));
+                }
+            }
+            else
+                yield return null;
+        }
+
         public static void Save(string filePath, object objToSerialize)
         {
             try
@@ -62,7 +86,6 @@ namespace BIMPO_BusIness_Management_Process_Observer
                 throw;
             }
         }
-
         public static List<T> Load<T>(string filePath) where T : new()
         {
             List<T> rez = new List<T>();

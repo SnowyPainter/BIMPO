@@ -17,7 +17,6 @@ namespace BIMPO_BusIness_Management_Process_Observer
         
         public static void CreateBasic(string xml = BasicPath)
         {
-
             if (File.Exists(xml))
                 File.Delete(xml);
 
@@ -68,6 +67,8 @@ namespace BIMPO_BusIness_Management_Process_Observer
 
             var business = new XElement("Business",
                 new XElement("BusinessTitle", info.BusinessTitle),
+                new XElement("MonthlySales", info.MonthlySales.ToString()),
+                new XElement("BusinessScale", info.BusinessScale.ToString()),
                 new XElement("Degdate", info.Degdate),
                 new XElement("Progress", info.Progress.ToString()),
                 new XElement("Deadline", new XElement("Start"), new XElement("End")),
@@ -135,7 +136,6 @@ namespace BIMPO_BusIness_Management_Process_Observer
 
             doc.Save(xml);
         }
-
         public static void CreateNewMemo(string parentBusiness, Memo memo, string xml = BasicPath)
         {
             XDocument doc = XDocument.Load(xml);
@@ -301,7 +301,6 @@ namespace BIMPO_BusIness_Management_Process_Observer
 
             return total <= 0 || totalLen <= 0 ? -1 : total / totalLen;
         }
-
         public static Deadline GetDeadline(string business_title, string xml = BasicPath)
         {
             XmlDocument doc = new XmlDocument();
@@ -323,21 +322,39 @@ namespace BIMPO_BusIness_Management_Process_Observer
 
             return new Deadline(startDate, endDate);
         }
-
         public static int GetBusinessProgress(string business_title, string xml = BasicPath)
+        {
+            int value;
+            if (!int.TryParse(GetRootFieldData(business_title, "Progress"), out value))
+                return -1;
+
+            return value;
+        }
+        public static int GetMonthlyAimSales(string business_title, string xml = BasicPath)
+        {
+            int value;
+            if (!int.TryParse(GetRootFieldData(business_title, "MonthlySales"), out value))
+                return 1;
+
+            return value;
+        }
+        public static int GetBusinessAimScale(string business_title, string xml = BasicPath)
+        {
+            int value;
+            if (!int.TryParse(GetRootFieldData(business_title, "BusinessScale"), out value))
+                return 1;
+
+            return value;
+        }
+        private static string GetRootFieldData(string business_title, string field,string xml = BasicPath)
         {
             XmlDocument doc = new XmlDocument();
             doc.Load(xml);
 
             XmlNode business = doc.SelectSingleNode($"//Root/Business[BusinessTitle[contains(text(), '{business_title}')]]");
-
-            int value;
-            if (!int.TryParse(business.SelectSingleNode("Progress").InnerText, out value))
-                return -1;
-
-            return value;
+            var fieldNode = business.SelectSingleNode(field);
+            return fieldNode == null ? null : fieldNode.InnerText;
         }
-
         public static int ReassignBusinessProgress(string business_title, string xml = BasicPath)
         {
             XmlDocument doc = new XmlDocument();
@@ -371,7 +388,6 @@ namespace BIMPO_BusIness_Management_Process_Observer
 
             return accomplished == 0 ? 0 : (int)(progress * 100);
         } //some progress problem (start)
-
         public static List<WorkTask> GetAllTasks(string business_title, string xml = BasicPath)
         {
             var accountDataDoc = new XmlDocument();
@@ -409,7 +425,6 @@ namespace BIMPO_BusIness_Management_Process_Observer
 
             return result;
         }
-
         public static List<Memo> GetAllMemos(string business_title, string xml = BasicPath)
         {
             var accountDataDoc = new XmlDocument();
@@ -430,8 +445,7 @@ namespace BIMPO_BusIness_Management_Process_Observer
             }
             return result;
         }
-
-        public static List<Memo> SelectSomeMemos(string business_title, int limit = 1,string xml = BasicPath)
+        public static List<Memo> GetSomeMemos(string business_title, int limit = 1,string xml = BasicPath)
         {
             if (limit < 1) return null;
 

@@ -62,6 +62,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AccountBook.cs" />
     <Compile Include="Business.cs" />
     <Compile Include="BusinessError.xaml.cs">
       <DependentUpon>BusinessError.xaml</DependentUpon>

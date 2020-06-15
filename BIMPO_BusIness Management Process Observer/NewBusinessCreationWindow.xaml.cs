@@ -23,7 +23,11 @@ namespace BIMPO_BusIness_Management_Process_Observer
         {
             InitializeComponent();
         }
-
+        private void WindowDragMove_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
         public Business b = new Business();
         private void SubmitBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -41,6 +45,26 @@ namespace BIMPO_BusIness_Management_Process_Observer
             b.BusinessTitle = BusinessTitle.Text.Trim();
             b.Degdate = DateTime.Now.ToShortDateString();
             b.Progress = 0;
+
+            int bs = 0, ms = 0;
+            if(int.TryParse(BusinessScale_Textbox.Text, out bs))
+            {
+                b.BusinessScale = bs;
+            }
+            else
+            {
+                BusinessMessageBox.Show("숫자만 입력해주세요", "정보 입력", Error: true);
+                return;
+            }
+            
+            if(int.TryParse(MonthlySales_Textbox.Text, out ms)) {
+                b.MonthlySales = ms;
+            }
+            else
+            {
+                BusinessMessageBox.Show("숫자만 입력해주세요", "정보 입력", Error: true);
+                return;
+            }
 
             XmlBusinessManager.CreateNewBusiness(b);
 

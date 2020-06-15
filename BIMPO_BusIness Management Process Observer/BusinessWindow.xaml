@@ -123,8 +123,18 @@
         <Grid HorizontalAlignment="Left" Height="750" Grid.Row="1" VerticalAlignment="Top" Width="300" Background="#FF85BB65">
             <materialDesign:PackIcon Kind="MoneyUsd" Foreground="White" Width="65" Height="65" Margin="211,10,0,0"></materialDesign:PackIcon>
             <Label Content="회계 " HorizontalContentAlignment="Right" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Background="White" Width="196" Margin="-1,23,0,0" Height="42" FontFamily="Microsoft YaHei UI"/>
-            <Button Content="그래프" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="135,85,0,0" Height="45"/>
-            <Button Content="하루 회계 정리" HorizontalAlignment="Left" Margin="135,140,0,0" VerticalAlignment="Top" Width="150" Height="52"/>
+            <Button Content="회계 파일 추가" HorizontalAlignment="Left" Margin="20,135,0,0" VerticalAlignment="Top" Width="265" Height="52" FontSize="18" Click="AttachAccountingFile_Click"/>
+            <ListView x:Name="AccountingListview" HorizontalAlignment="Left" Height="345" VerticalAlignment="Top" Width="260" Margin="25,200,0,0" Loaded="AccountList_Loaded">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="회계서" DisplayMemberBinding="{Binding FileName}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <TextBlock x:Name="BusinessScale_TextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Margin="110,104,-1,0" Width="191"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="목표 사업 규모" VerticalAlignment="Top" Margin="20,104,0,0"/>
+            <TextBlock x:Name="MonthlySales_TextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Margin="110,79,0,0" RenderTransformOrigin="-0.078,0.313" Width="190"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="목표 한달 매출" VerticalAlignment="Top" Margin="20,80,0,0"/>
         </Grid>
     </Grid>
 </Window>

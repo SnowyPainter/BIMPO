@@ -1,42 +1,95 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Root>
   <Business>
-    <BusinessTitle>현식이</BusinessTitle>
-    <Degdate>2019-12-29</Degdate>
-    <Progress>100</Progress>
+    <BusinessTitle>SJson</BusinessTitle>
+    <MonthlySales>3000000</MonthlySales>
+    <BusinessScale>200000000</BusinessScale>
+    <Degdate>2020-02-03</Degdate>
+    <Progress>0</Progress>
     <Deadline>
-      <Start>2019-12-08</Start>
-      <End>2019-12-31</End>
+      <Start>2020-02-03</Start>
+      <End>2020-03-31</End>
     </Deadline>
     <Memos>
       <Memo Index="0">
-        <Title>방금 생각난 아이디어!</Title>
-        <Content>현식이 이모티콘은 한정판으로하자</Content>
-        <Color>#FFB128FF</Color>
+        <Title>SJSON</Title>
+        <Content>대충 묶어놓음 큰 틀을 형성해줌</Content>
+        <Color>#FF00B0C1</Color>
       </Memo>
       <Memo Index="1">
-        <Title>웹툰도 만들자</Title>
-        <Content>웹툰을 만들고 다른 웹툰에 투입</Content>
+        <Title>SJkey</Title>
+        <Content>키 역할을 박싱해줌
+일관됨</Content>
         <Color>#FF00B0C1</Color>
       </Memo>
       <Memo Index="2">
-        <Title>웹 사이트 구축후에는</Title>
-        <Content>웹툰을 그기로 이전. ( 사용자수 증가 효과 기대)</Content>
+        <Title>SJValue</Title>
+        <Content>값 영역을 박싱해줌
+일관됨
+Value에는 리스트, 스트링, 넘버 다 들어갈수있도록 제너릭</Content>
         <Color>#FFF2B705</Color>
+      </Memo>
+      <Memo Index="3">
+        <Title>암호화 값</Title>
+        <Content>값을 넣을떄 암호키를 같이 넣고 가져올때 암호키를 받아서 해독하는 방식 행렬곱</Content>
+        <Color>#FFFF8000</Color>
       </Memo>
     </Memos>
     <Tasks>
       <Task Index="0">
-        <Title>현식이 이모티콘 팔기</Title>
-        <Describe>현식이 이모티콘을 팔아서 웹사이트 구축 비용을 범</Describe>
-        <Priority>4</Priority>
-        <Accomplished>True</Accomplished>
+        <Title>0203 - SJSON 표본 작성</Title>
+        <Describe>기초가 될 표본 작성
+기본 구조 간략 설명
+SJson 객체 = { }
+SJKey 객체 = { "key" : }
+SJValue 객체 = { : "Value" }
+이런 형태로 세분화함
+ICollection 친화적 IEnumerable 친화적</Describe>
+        <Priority>2</Priority>
+        <Accomplished>false</Accomplished>
+      </Task>
+    </Tasks>
+  </Business>
+  <Business>
+    <BusinessTitle>내새로운인생</BusinessTitle>
+    <MonthlySales>1</MonthlySales>
+    <BusinessScale>1</BusinessScale>
+    <Degdate>2020-03-19</Degdate>
+    <Progress>33</Progress>
+    <Deadline>
+      <Start />
+      <End />
+    </Deadline>
+    <Memos>
+      <Memo Index="0">
+        <Title>웃긴 유머</Title>
+        <Content>할아버지가 좋아하는 돈은???? 할머니 이색기야!!!!!!!!!!!!</Content>
+        <Color>#FFF2B705</Color>
+      </Memo>
+      <Memo Index="1">
+        <Title>우주인들이 술 마시는곳은?</Title>
+        <Content>스페이스바이색기야!!!!!!!!!!!!!!!!!!</Content>
+        <Color>#FFFF8000</Color>
+      </Memo>
+    </Memos>
+    <Tasks>
+      <Task Index="0">
+        <Title>여자친구 사귀기</Title>
+        <Describe>길가다가 사귀자고하면 안된다 할ㄲ꺼 아니야??????????????????? 이미 경찰서도 갔다왔단 말이ㅑㅇ</Describe>
+        <Priority>1</Priority>
+        <Accomplished>false</Accomplished>
       </Task>
       <Task Index="1">
-        <Title>웹사이드 구축</Title>
-        <Describe>외주를 맡겨서 웹사이트를 구축하고 호스팅함 도메인도 삼</Describe>
-        <Priority>2</Priority>
+        <Title>계란후라이 해먹기</Title>
+        <Describe>가스불 키는 방법을 인터넷에 검색해봐야지!!!!</Describe>
+        <Priority>1</Priority>
         <Accomplished>True</Accomplished>
+      </Task>
+      <Task Index="2">
+        <Title>독립하기</Title>
+        <Describe>방구석에서 이너넷만 하던 나도 이제 내 집을 찾고 직장을 찾아 독립해야겠어 BIMPO가 있으니 걱정 할 피료옶다구</Describe>
+        <Priority>2</Priority>
+        <Accomplished>false</Accomplished>
       </Task>
     </Tasks>
   </Business>

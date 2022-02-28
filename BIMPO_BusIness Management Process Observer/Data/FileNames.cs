@@ -8,7 +8,6 @@ namespace BIMPO_BusIness_Management_Process_Observer
 {
     public static class FileNames
     {
-        public static string XmlAccount = "user_account.xml";
         public static string XmlBusiness = "user_business.xml";
 
         public static string DiagramControlsSave = "diagram_controls.dat";

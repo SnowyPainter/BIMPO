@@ -19,18 +19,7 @@ namespace BIMPO_BusIness_Management_Process_Observer
         {
             InitializeComponent();
 
-            string userAccountXmlPath = "./user_account.xml";
             string businessXmlPath = "./user_business.xml";
-
-            if (!File.Exists(userAccountXmlPath) || !XmlAccount.Defects())
-            {
-                BusinessMessageBox.Show("계정을 새로 만듭니다.", "데이터 손실", MessageBoxButton.OK, Error:true);
-
-                AccountConfigWindow confWindow = new AccountConfigWindow();
-                confWindow.ShowDialog();
-
-                XmlAccount.CreateBasic(confWindow.DataList);
-            }
 
             if (!File.Exists(businessXmlPath) || !XmlBusinessManager.Defects())
                 XmlBusinessManager.CreateBasic();
@@ -90,7 +79,7 @@ namespace BIMPO_BusIness_Management_Process_Observer
         private void StartupWindow_Loaded(object sender, RoutedEventArgs e)
         {
             //Greeting settings
-            GreetingLabel.Content = $"{randomGreetings[random.Next(0, randomGreetings.Length)]} {XmlAccount.GetName()}님";
+            GreetingLabel.Content = $"{randomGreetings[random.Next(0, randomGreetings.Length)]}";
             BackgroundGrid.Background = 
                 (SolidColorBrush)new BrushConverter().ConvertFrom(backgroundColors[random.Next(0,backgroundColors.Length)]);
 

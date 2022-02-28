@@ -40,3 +40,46 @@ E:\C#\BIMPO_BusIness Management Process Observer\BIMPO_BusIness Management Proce
 E:\C#\BIMPO_BusIness Management Process Observer\BIMPO_BusIness Management Process Observer\obj\Debug\BusinessQuestion.baml
 E:\C#\BIMPO_BusIness Management Process Observer\BIMPO_BusIness Management Process Observer\obj\Debug\InformationWindow.g.cs
 E:\C#\BIMPO_BusIness Management Process Observer\BIMPO_BusIness Management Process Observer\obj\Debug\InformationWindow.baml
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\bin\Debug\BIMPO_BusIness Management Process Observer.exe.config
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\bin\Debug\BIMPO_BusIness Management Process Observer.exe
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\bin\Debug\BIMPO_BusIness Management Process Observer.pdb
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\bin\Debug\MaterialDesignColors.dll
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\bin\Debug\MaterialDesignColors.pdb
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BIMPO_BusIness Management Process Observer.csproj.AssemblyReference.cache
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BIMPO_BusIness Management Process Observer.csproj.SuggestedBindingRedirects.cache
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\AccountConfigWindow.g.cs
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BusinessError.g.cs
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BusinessMessage.g.cs
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BusinessQuestion.g.cs
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BusinessWindow.g.cs
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\DiagramShowWindow.g.cs
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\InformationWindow.g.cs
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\MemoCreation.g.cs
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\NewBusinessCreationWindow.g.cs
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\StartupWindow.g.cs
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\TaskCreateWindow.g.cs
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\App.g.cs
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BIMPO_BusIness Management Process Observer_MarkupCompile.cache
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BIMPO_BusIness Management Process Observer_MarkupCompile.lref
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\App.baml
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\AccountConfigWindow.baml
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BusinessError.baml
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BusinessMessage.baml
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BusinessQuestion.baml
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BusinessWindow.baml
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\DiagramShowWindow.baml
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\InformationWindow.baml
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\MemoCreation.baml
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\NewBusinessCreationWindow.baml
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\StartupWindow.baml
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\TaskCreateWindow.baml
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BIMPO_BusIness Management Process Observer.g.resources
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BIMPO_BusIness_Management_Process_Observer.Properties.Resources.resources
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BIMPO_BusIness Management Process Observer.csproj.GenerateResource.cache
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BIMPO_BusIness Management Process Observer.csproj.CoreCompileInputs.cache
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BIMPO_BusIness Management Process Observer.csproj.CopyComplete
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BIMPO_BusIness Management Process Observer.exe
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\BIMPO_BusIness Management Process Observer.pdb

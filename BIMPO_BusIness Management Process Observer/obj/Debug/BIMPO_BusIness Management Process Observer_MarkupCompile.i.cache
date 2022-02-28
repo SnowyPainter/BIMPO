@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\C#\BIMPO_BusIness Management Process Observer\BIMPO_BusIness Management Process Observer\obj\Debug\
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\obj\Debug\
 BIMPO_BusIness_Management_Process_Observer
 none
 false
 DEBUG;TRACE
-E:\C#\BIMPO_BusIness Management Process Observer\BIMPO_BusIness Management Process Observer\App.xaml
-11887499817
+C:\Users\snowy\Documents\Codes\Bimpo\BIMPO_BusIness Management Process Observer\App.xaml
+112058116002
 
-31247024978
-16630514157
-AccountConfigWindow.xaml;BusinessError.xaml;BusinessMessage.xaml;BusinessQuestion.xaml;BusinessWindow.xaml;DiagramShowWindow.xaml;InformationWindow.xaml;MemoCreation.xaml;NewBusinessCreationWindow.xaml;StartupWindow.xaml;TaskCreateWindow.xaml;
+31-1486817391
+161583561780
+AccountConfigWindow.xaml;MessageBox\BusinessError.xaml;MessageBox\BusinessMessage.xaml;MessageBox\BusinessQuestion.xaml;BusinessWindow.xaml;DiagramShowWindow.xaml;InformationWindow.xaml;MemoCreation.xaml;NewBusinessCreationWindow.xaml;StartupWindow.xaml;TaskCreateWindow.xaml;
 
 True
 
